@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Movie details{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="well">
+            <div class="row">
+                <div class="col-4">
+                    <img style="width: 100%;" src="{{movie.Poster}}">
+                </div>
+                <div class="col-8">
+                    <h2 class="text-light">{{ movie.Title }}</h2>
+                    <ul class="list-group list-group-flush list-group-dark">
+                        <li class="list-group-item"><strong>Genre: </strong>{{ movie.Genre }}</li>
+                        <li class="list-group-item"><strong>Released: </strong>{{ movie.Released }}</li>
+                        <li class="list-group-item"><strong>Rated: </strong>{{ movie.Rated }}</li>
+                        <li class="list-group-item"><strong>IMDB rating: </strong>{{ movie.imdbRating }}</li>
+                        <li class="list-group-item"><strong>Director: </strong>{{ movie.Director }}</li>
+                        <li class="list-group-item"><strong>Writer: </strong>{{ movie.Writer }}</li>
+                        <li class="list-group-item"><strong>Actors: </strong>{{ movie.Actors }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="well-bottom">
+            <h3 style="padding: 0;">Plot</h3>
+            {{ movie.Plot }}
+            <hr>
+            <a href="http://imdb.com/title/{{ movie.imdbID }}" class="btn btn-primary" target="_blank">View IMDB</a>
+            <a href="{{ url_for('home') }}" class="btn btn-light">Go Back To Search </a>
+        </div>
+    </div>
+{% endblock %}

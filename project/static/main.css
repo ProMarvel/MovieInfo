@@ -1,0 +1,30 @@
+.well {
+    background-color: rgb(33, 37, 41);
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.home-well {
+    background-color: rgb(33, 37, 41);
+    padding: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.well-bottom {
+    background-color: rgb(33, 37, 41);
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.list-group-item {
+    background-color: inherit;
+    color: white;
+    padding-left: inherit;
+    border: none;
+}
