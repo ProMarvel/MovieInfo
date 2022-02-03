@@ -39,7 +39,7 @@ def movieInfo(imdbID):
 
     response = requests.get('http://www.omdbapi.com/', params = params)
     data = response.json()
-    pprint.pprint(data)
+
     return render_template('movieInfo.html', movie=data)
 
 @app.errorhandler(404)
