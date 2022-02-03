@@ -2,25 +2,27 @@
 {% block title %}Homepage{% endblock %}
 {% block content %}
     <div class="container">
-        <div class="home-well">
+        <section class="bg-dark p-5 mt-5 mb-5 text-light">
             <form action="" method="POST">
                 <h1 class="text-center">Search For Any Movie</h1>
                 <input type="text" class="form-control form-control-lg" name="searchText" placeholder="Search Movies...">
             </form>
-        </div>
+        </section>
 
-        <div class="row">
+        <div class="row g-3 mb-4">
             {% if movies %}
             {% for movie in movies %}
+            {% if movie.Poster != 'N/A' %}
             <div class="col-md-4 col-lg-3 col-sm-12">
-                <div class="card">
-                    <img src="{{ movie.Poster }}" class="card-img-top" alt="">
+                <div class="card" style="height: 100%">
+                    <img src="{{ movie.Poster }}" class="img-fluid card-img-top" alt="" style="height">
                     <div class="card-body">
-                      <h5 class="card-title">{{ movie.Title }}</h5>
+                      <h6 class="card-title">{{ movie.Title }}</h6>
                       <a href="/movie/{{movie.imdbID}}" class="btn btn-primary">Movie Details</a>
                     </div>
-                  </div>
+                </div>
             </div>
+            {% endif %}
             {% endfor %}
             {% endif %}
         </div>
