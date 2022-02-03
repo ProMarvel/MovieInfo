@@ -14,8 +14,8 @@
             {% for movie in movies %}
             {% if movie.Poster != 'N/A' %}
             <div class="col-md-4 col-lg-3 col-sm-12">
-                <div class="card" style="height: 100%">
-                    <img src="{{ movie.Poster }}" class="img-fluid card-img-top" alt="" style="height">
+                <div class="card" style="height: 100%;">
+                    <img src="{{ movie.Poster }}" class="img-fluid card-img-top" alt="">
                     <div class="card-body">
                       <h6 class="card-title">{{ movie.Title }}</h6>
                       <a href="/movie/{{movie.imdbID}}" class="btn btn-primary">Movie Details</a>
